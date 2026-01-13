@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sibin John – Senior SRE & DevOps Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Senior Site Reliability and DevOps Engineer with 10+ years of experience in AWS, GCP, Kubernetes, Terraform, and cloud automation."
+  />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card-bg: #141a33;
+      --accent: #4fd1c5;
+      --accent-soft: rgba(79, 209, 197, 0.12);
+      --text-main: #f7fafc;
+      --text-muted: #a0aec0;
+      --border-subtle: #2d3748;
+      --badge-bg: #1f2937;
+      --badge-border: #4b5563;
+      --link: #63b3ed;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1a202c 0, #0b1020 55%, #050609 100%);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 32px 16px 48px;
+      display: flex;
+      justify-content: center;
+    }
+    main {
+      width: 100%;
+      max-width: 920px;
+      background: linear-gradient(135deg, rgba(20,26,51,0.98), rgba(11,16,32,0.98));
+      border-radius: 18px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(79, 209, 197, 0.25);
+      padding: 28px 22px 32px;
+    }
+    @media (min-width: 768px) {
+      body { padding: 40px 24px 64px; }
+      main { padding: 32px 32px 40px; }
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 18px;
+      margin-bottom: 22px;
+    }
+    @media (min-width: 720px) {
+      .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+    .name-role {
+      max-width: 520px;
+    }
+    h1 {
+      font-size: 1.9rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .role {
+      font-size: 0.96rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .summary-tagline {
+      margin-top: 10px;
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      background: var(--accent-soft);
+      border-radius: 10px;
+      padding: 8px 10px;
+      border: 1px solid rgba(79, 209, 197, 0.25);
+    }
+    .contact {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      text-align: left;
+    }
+    .contact a {
+      color: var(--link);
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout */
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr);
+      gap: 22px;
+    }
+    @media (min-width: 920px) {
+      .layout {
+        grid-template-columns: minmax(0, 1.9fr) minmax(0, 1.1fr);
+        gap: 26px;
+      }
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .section-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border-subtle);
+      padding: 12px 12px 10px;
+    }
+
+    /* Summary */
+    .summary-text {
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    /* Experience */
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      font-size: 0.9rem;
+    }
+    .job {
+      padding: 10px 10px 9px;
+      border-radius: 10px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: radial-gradient(circle at top left, rgba(79, 209, 197, 0.08), transparent 50%);
+    }
+    .job-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+    .job-title {
+      font-weight: 600;
+    }
+    .job-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .job-location {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .job ul {
+      margin-top: 4px;
+      margin-left: 18px;
+    }
+    .job li {
+      margin-bottom: 3px;
+    }
+
+    /* Tech stack */
+    .stack-category {
+      margin-bottom: 8px;
+    }
+    .stack-category-title {
+      font-weight: 600;
+      font-size: 0.86rem;
+      margin-bottom: 4px;
+      color: var(--text-main);
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .badge {
+      font-size: 0.76rem;
+      padding: 3px 7px;
+      border-radius: 999px;
+      border: 1px solid var(--badge-border);
+      background: linear-gradient(135deg, var(--badge-bg), #111827);
+      white-space: nowrap;
+    }
+
+    /* Education & certs */
+    .education-item,
+    .cert-item {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+    .edu-degree {
+      font-weight: 600;
+    }
+    .edu-meta {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .lang-list {
+      font-size: 0.88rem;
+    }
+
+    /* Footer note */
+    .footer-note {
+      margin-top: 10px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header class="header">
+    <div class="name-role">
+      <h1>Sibin John</h1>
+      <div class="role">Senior Site Reliability &amp; DevOps Engineer</div>
+      <p class="summary-tagline">
+        Cloud is my habitat, and Linux is my foundation – designing resilient cloud platforms and
+        automating everything from infrastructure to delivery pipelines.
+      </p>
+    </div>
+    <div class="contact">
+      <div>Berlin, Germany</div>
+      <div>PH: <a href="tel:+4915752836026">+49 1575 2836026</a></div>
+      <div>Email: <a href="mailto:sibinnediyoram@gmail.com">sibinnediyoram@gmail.com</a></div>
+      <div>
+        LinkedIn:
+        <a href="https://linkedin.com/in/sibinnediyoram" target="_blank" rel="noreferrer">
+          linkedin.com/in/sibinnediyoram
+        </a>
+      </div>
+      <div>
+        Medium:
+        <a href="https://medium.com/@sibinnediyoram" target="_blank" rel="noreferrer">
+          medium.com/@sibinnediyoram
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- Left column -->
+    <div>
+      <section>
+        <h2>Summary</h2>
+        <div class="section-card summary-text">
+          With over 10 years of IT experience, including 7+ years as a DevOps and Site Reliability
+          Engineer, specializing in designing robust cloud infrastructures, Kubernetes platforms,
+          and end‑to‑end automation across AWS and GCP for high‑availability, secure systems.
+        </div>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <div class="section-card">
+          <div class="experience-list">
+            <article class="job">
+              <div class="job-header">
+                <div>
+                  <div class="job-title">Senior DevOps Engineer</div>
+                  <div class="job-meta">Sep 2025 – Present · Spark Networks GmbH</div>
+                </div>
+                <div class="job-location">Berlin, Germany</div>
+              </div>
+              <ul>
+                <li>Driving platform migration for multiple products onto modern, automated cloud infrastructure.</li>
+                <li>Provisioning and standardizing infrastructure with Terraform and improved IaC patterns.</li>
+                <li>Implementing automations to streamline workflows for development and QA teams.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-header">
+                <div>
+                  <div class="job-title">Senior Site Reliability Engineer</div>
+                  <div class="job-meta">Jan 2022 – Sep 2025 · Unzer Group GmbH</div>
+                </div>
+                <div class="job-location">Berlin, Germany</div>
+              </div>
+              <ul>
+                <li>Designed, implemented, and optimized cloud infrastructure (VPC, IAM, KMS, DB, storage) and Kubernetes clusters on AWS and GCP.</li>
+                <li>Led multiple migration projects from cloud and on‑prem environments into Unzer’s GitOps‑driven cloud platform.</li>
+                <li>Developed automated workflows with Ansible, ArgoCD, Jenkins, Helm, and GitHub Actions for releases and infra tooling.</li>
+                <li>Built observability and centralized logging with AWS OpenSearch, Fluent Bit, and Kibana to improve reliability and MTTR.</li>
+                <li>Participated in on‑call, incident response, post‑mortems, and implemented cost optimization using Kubecost and DoIT.</li>
+                <li>Developed reusable Terraform modules for AWS/GCP services and integrated SonarQube with Azure SSO.</li>
+                <li>Authored runbooks and standards for observability, automation, alerting, and cloud infrastructure, and collaborated with SecOps on audits.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-header">
+                <div>
+                  <div class="job-title">Senior Systems Engineer</div>
+                  <div class="job-meta">Jan 2021 – Dec 2021 · Gadgeon Smart Systems Pvt Ltd</div>
+                </div>
+                <div class="job-location">Kochi, India</div>
+              </div>
+              <ul>
+                <li>Supported systems engineering for IoT infrastructure, including on‑prem Kubernetes clusters and Ceph storage.</li>
+                <li>Implemented monitoring and alerting using Prometheus, Grafana, Zabbix, node exporter, and Opsgenie.</li>
+                <li>Deployed Kubernetes operators for databases (Postgres, Couchbase, MariaDB) and observability components.</li>
+                <li>Implemented centralized application logging with Graylog.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-header">
+                <div>
+                  <div class="job-title">2nd Level Operations Engineer</div>
+                  <div class="job-meta">Jan 2019 – Jan 2021 · Mindcurv Technology Solutions Pvt Ltd</div>
+                </div>
+                <div class="job-location">Kochi, India</div>
+              </div>
+              <ul>
+                <li>Collaborated with the operations team on an IoT e‑commerce project hosted on AWS.</li>
+                <li>Managed AWS cloud infrastructure, backups, and database optimization.</li>
+                <li>Maintained monitoring using Prometheus, Grafana, Nagios, Instana, and Opsgenie, plus ELK‑based logging.</li>
+                <li>Handled patch management, application deployments on EC2, OpenShift, and EKS, and conducted cost optimization initiatives.</li>
+                <li>Analyzed recurring alerts to drive improvements in monitoring and alerting strategies.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-header">
+                <div>
+                  <div class="job-title">Senior Systems Engineer</div>
+                  <div class="job-meta">Aug 2018 – Jan 2019 · HostDime India Pvt Ltd</div>
+                </div>
+                <div class="job-location">Trivandrum, India</div>
+              </div>
+              <ul>
+                <li>Designed customized hosting solutions based on client requirements.</li>
+                <li>Researched and evaluated new tools and platforms for revenue‑generating hosting solutions.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-header">
+                <div>
+                  <div class="job-title">Systems Engineer</div>
+                  <div class="job-meta">Oct 2013 – Aug 2018 · AssistanZ Networks Pvt Ltd</div>
+                </div>
+                <div class="job-location">Coimbatore, India</div>
+              </div>
+              <ul>
+                <li>Implemented CI/CD pipelines using Jenkins for application delivery.</li>
+                <li>Provisioned and managed Apache CloudStack infrastructure.</li>
+                <li>Managed Kubernetes infrastructure on GCP and maintained web servers (Apache, Nginx, Tomcat).</li>
+                <li>Administered monitoring with Nagios and Zabbix, and configured MySQL replication and backups.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-header">
+                <div>
+                  <div class="job-title">Junior Network Administrator</div>
+                  <div class="job-meta">– · Reubro International</div>
+                </div>
+                <div class="job-location">Ernakulam, India</div>
+              </div>
+              <ul>
+                <li>Provided support for remote and physical servers across Linux environments.</li>
+                <li>Installed and configured Linux (CentOS, Ubuntu) and managed web servers and user accounts.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Right column -->
+    <aside>
+      <section>
+        <h2>Tech Stack</h2>
+        <div class="section-card">
+          <div class="stack-category">
+            <div class="stack-category-title">Cloud</div>
+            <div class="badges">
+              <span class="badge">AWS</span>
+              <span class="badge">GCP</span>
+            </div>
+          </div>
+
+          <div class="stack-category">
+            <div class="stack-category-title">IaC &amp; Automation</div>
+            <div class="badges">
+              <span class="badge">Terraform</span>
+              <span class="badge">Ansible</span>
+              <span class="badge">GitHub Actions</span>
+              <span class="badge">Jenkins</span>
+              <span class="badge">ArgoCD</span>
+              <span class="badge">Helm</span>
+            </div>
+          </div>
+
+          <div class="stack-category">
+            <div class="stack-category-title">Containers &amp; Orchestration</div>
+            <div class="badges">
+              <span class="badge">Docker</span>
+              <span class="badge">Kubernetes</span>
+              <span class="badge">AWS EKS</span>
+              <span class="badge">GCP GKE</span>
+              <span class="badge">OpenShift</span>
+            </div>
+          </div>
+
+          <div class="stack-category">
+            <div class="stack-category-title">Observability &amp; Logging</div>
+            <div class="badges">
+              <span class="badge">Datadog</span>
+              <span class="badge">Prometheus</span>
+              <span class="badge">Grafana</span>
+              <span class="badge">Nagios</span>
+              <span class="badge">Zabbix</span>
+              <span class="badge">Instana</span>
+              <span class="badge">AWS OpenSearch</span>
+              <span class="badge">Fluent Bit</span>
+              <span class="badge">Kibana</span>
+              <span class="badge">ELK / Graylog</span>
+            </div>
+          </div>
+
+          <div class="stack-category">
+            <div class="stack-category-title">Scripting &amp; Tools</div>
+            <div class="badges">
+              <span class="badge">Bash</span>
+              <span class="badge">Python</span>
+              <span class="badge">RabbitMQ</span>
+              <span class="badge">MySQL</span>
+              <span class="badge">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="section-card">
+          <div class="education-item">
+            <div class="edu-degree">B.Tech in Electronics &amp; Communication Engineering</div>
+            <div class="edu-meta">University of Calicut, India · GPA: 71.53%</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Certifications</h2>
+        <div class="section-card">
+          <div class="cert-item">Certified Kubernetes Administrator (CKA), CNCF</div>
+          <div class="cert-item">Certified Kubernetes Application Developer (CKAD), CNCF</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Languages</h2>
+        <div class="section-card lang-list">
+          <div>English – C1</div>
+          <div>Deutsch – B1/B2</div>
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <div class="footer-note">
+    Last updated: Jan 2026
+  </div>
+</main>
+</body>
+</html>
