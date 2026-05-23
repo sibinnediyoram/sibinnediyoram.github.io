@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Sibin John – Senior SRE & DevOps Engineer</title>
+  <title>Sibin John – Senior Platform / DevOps / SRE Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Senior Site Reliability and DevOps Engineer with 10+ years of experience in AWS, GCP, Kubernetes, Terraform, and cloud automation."
+    content="Senior Platform / DevOps / SRE Engineer with 10+ years across hosting, IoT, and regulated payments. Specialising in shared platform components, Terraform modules, GitOps, and cloud infrastructure across AWS and GCP."
   />
   <style>
     :root {
@@ -179,6 +179,12 @@
     .job li {
       margin-bottom: 3px;
     }
+    .job-stack {
+      margin-top: 6px;
+      font-size: 0.77rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
 
     /* Tech stack */
     .stack-category {
@@ -235,10 +241,10 @@
   <header class="header">
     <div class="name-role">
       <h1>Sibin John</h1>
-      <div class="role">Senior Site Reliability &amp; DevOps Engineer</div>
+      <div class="role">Senior Platform / DevOps / SRE Engineer</div>
       <p class="summary-tagline">
-        Enabling scalable, reliable cloud infrastructure through Linux expertise, 
-        cloud automation, and robust delivery pipelines across AWS and GCP environments.
+        Building shared platform components — Helm charts, Terraform modules, GitOps templates —
+        consumed by product teams across multi-region AWS / GCP estates.
       </p>
     </div>
     <div class="contact">
@@ -252,14 +258,16 @@
         </a>
       </div>
       <div>
+        GitHub:
+        <a href="https://github.com/sibinnediyoram" target="_blank" rel="noreferrer">
+          github.com/sibinnediyoram
+        </a>
+      </div>
+      <div>
         Medium:
         <a href="https://medium.com/@sibinnediyoram" target="_blank" rel="noreferrer">
           medium.com/@sibinnediyoram
         </a>
-      </div>
-      <div>
-        Blog:
-        <a href="blog/">sibinnediyoram.github.io/blog</a>
       </div>
     </div>
   </header>
@@ -270,9 +278,10 @@
       <section>
         <h2>Summary</h2>
         <div class="section-card summary-text">
-          With over 10 years of IT experience, including 7+ years as a DevOps and Site Reliability
-          Engineer, specializing in designing robust cloud infrastructures, Kubernetes platforms,
-          and end‑to‑end automation across AWS and GCP for high‑availability, secure systems.
+          Senior infrastructure engineer with 10+ years across hosting, IoT, and regulated payments.
+          Builds shared platform components — Helm charts, Terraform modules, GitOps templates —
+          consumed by product teams across multi-region AWS / GCP estates. Hands-on with
+          PCI-DSS / GDPR hardening, FinOps, and reliability work. Berlin-based, B1 German.
         </div>
       </section>
 
@@ -284,33 +293,70 @@
               <div class="job-header">
                 <div>
                   <div class="job-title">Senior DevOps Engineer</div>
-                  <div class="job-meta">Sep 2025 – Present · Spark Networks GmbH</div>
+                  <div class="job-meta">09/2025 – Present · Spark Networks GmbH</div>
                 </div>
                 <div class="job-location">Berlin, Germany</div>
               </div>
               <ul>
-                <li>Driving platform migration for multiple products onto modern, automated cloud infrastructure.</li>
-                <li>Provisioning and standardizing infrastructure with Terraform and improved IaC patterns.</li>
-                <li>Implementing automations to streamline workflows for development and QA teams.</li>
+                <li>Building shared platform components — ArgoCD repo, GitLab CI global templates, umbrella Helm chart — consumed by dev teams across the unified AWS / EKS estate serving 9 dating brands.</li>
+                <li>Led migration of 9 dating brands onto a unified AWS / EKS platform on Terraform + Kubernetes.</li>
+                <li>Cut manual QA / Dev effort by 20% by rolling out GitLab CI + ArgoCD GitOps workflows that product teams self-serve.</li>
+                <li>Owned automated patch lifecycle across EKS clusters, Terraform providers, and AWS AMIs.</li>
+                <li>Built cross-account secret sync across 5 AWS accounts with Python + Lambda for centralised Secrets Manager backups.</li>
+                <li>Stood up infra and Cloudflare observability in New Relic; admin MSK Kafka via Strimzi Operator (provisioning, topics, scaling).</li>
               </ul>
+              <div class="job-stack">Stack: AWS · EKS · Terraform · GitLab CI · ArgoCD · Helm · MSK Kafka · New Relic · Cloudflare · Python · Lambda</div>
             </article>
 
             <article class="job">
               <div class="job-header">
                 <div>
                   <div class="job-title">Senior Site Reliability Engineer</div>
-                  <div class="job-meta">Jan 2022 – Sep 2025 · Unzer Group GmbH</div>
+                  <div class="job-meta">01/2022 – 08/2025 · Unzer Group GmbH</div>
                 </div>
                 <div class="job-location">Berlin, Germany</div>
               </div>
               <ul>
-                <li>Designed, implemented, and optimized cloud infrastructure (VPC, IAM, KMS, DB, storage) and Kubernetes clusters on AWS and GCP.</li>
-                <li>Led multiple migration projects from cloud and on‑prem environments into Unzer’s GitOps‑driven cloud platform.</li>
-                <li>Developed automated workflows with Ansible, ArgoCD, Jenkins, Helm, and GitHub Actions for releases and infra tooling.</li>
-                <li>Built observability and centralized logging with AWS OpenSearch, Fluent Bit, and Kibana to improve reliability and MTTR.</li>
-                <li>Participated in on‑call, incident response, post‑mortems, and implemented cost optimization using Kubecost and DoIT.</li>
-                <li>Developed reusable Terraform modules for AWS/GCP services and integrated SonarQube with Azure SSO.</li>
-                <li>Authored runbooks and standards for observability, automation, alerting, and cloud infrastructure, and collaborated with SecOps on audits.</li>
+                <li>Maintained the org-wide Helm chart template adopted by multiple product teams as their deployment baseline.</li>
+                <li>Authored reusable Terraform modules and GitHub Actions pipelines used across product teams — including a GCP artifact registry module consumed end-to-end by a product team.</li>
+                <li>Acquisition integration: led infrastructure migrations from legacy / minimal cloud setups onto a GitOps-driven IaC platform on AWS and GCP — cut new-project onboarding from months to weeks.</li>
+                <li>FinOps: implemented KEDA-based autoscaling and Kubecost-driven rightsizing — reduced monthly EKS spend while stabilising peak-load performance.</li>
+                <li>Security hardening: enforced Zero Trust via mTLS and Pod Security Groups to meet PCI-DSS and GDPR compliance for payments workloads.</li>
+                <li>CI improvements: cut overall build &amp; release time by 30% through redefined pipeline automation.</li>
+                <li>Observability: built a high-fidelity logging / monitoring stack (Datadog, OpenSearch, Fluent Bit) — drove MTTR from 1 hr down to 15 min via actionable SLOs.</li>
+              </ul>
+              <div class="job-stack">Stack: AWS · GCP · EKS · GKE · Terraform · Helm · GitHub Actions · KEDA · Kubecost · Datadog · OpenSearch · Fluent Bit · Cloudflare</div>
+            </article>
+
+            <article class="job">
+              <div class="job-header">
+                <div>
+                  <div class="job-title">Senior Systems Engineer</div>
+                  <div class="job-meta">01/2021 – 12/2021 · Gadgeon Smart Systems</div>
+                </div>
+                <div class="job-location">Kochi, India</div>
+              </div>
+              <ul>
+                <li>Administered on-prem Kubernetes clusters and Ceph storage upgrades for high-availability IoT platforms.</li>
+                <li>Reduced downtime through Prometheus / Grafana / Opsgenie monitoring and alerting.</li>
+                <li>Provisioned databases and observability components in Kubernetes via operators (PostgreSQL, Couchbase, MariaDB, Prometheus, Grafana).</li>
+                <li>Implemented centralised application logging using Graylog.</li>
+              </ul>
+              <div class="job-stack">Stack: Kubernetes · Ceph · Prometheus · Grafana · Graylog · Opsgenie</div>
+            </article>
+
+            <article class="job">
+              <div class="job-header">
+                <div>
+                  <div class="job-title">DevOps Engineer</div>
+                  <div class="job-meta">01/2019 – 12/2020 · Mindcurv Technology Solutions</div>
+                </div>
+                <div class="job-location">Kochi, India</div>
+              </div>
+              <ul>
+                <li>Automated application deployments across EC2, OpenShift, and EKS clusters for IoT applications.</li>
+                <li>Optimised recurring alerts to reduce monitoring noise and focus team effort on actionable incidents.</li>
+                <li>Cost optimisation through usage analysis and stale-resource cleanup.</li>
               </ul>
             </article>
 
@@ -318,46 +364,13 @@
               <div class="job-header">
                 <div>
                   <div class="job-title">Senior Systems Engineer</div>
-                  <div class="job-meta">Jan 2021 – Dec 2021 · Gadgeon Smart Systems Pvt Ltd</div>
-                </div>
-                <div class="job-location">Kochi, India</div>
-              </div>
-              <ul>
-                <li>Supported systems engineering for IoT infrastructure, including on‑prem Kubernetes clusters and Ceph storage.</li>
-                <li>Implemented monitoring and alerting using Prometheus, Grafana, Zabbix, node exporter, and Opsgenie.</li>
-                <li>Deployed Kubernetes operators for databases (Postgres, Couchbase, MariaDB) and observability components.</li>
-                <li>Implemented centralized application logging with Graylog.</li>
-              </ul>
-            </article>
-
-            <article class="job">
-              <div class="job-header">
-                <div>
-                  <div class="job-title">2nd Level Operations Engineer</div>
-                  <div class="job-meta">Jan 2019 – Jan 2021 · Mindcurv Technology Solutions Pvt Ltd</div>
-                </div>
-                <div class="job-location">Kochi, India</div>
-              </div>
-              <ul>
-                <li>Collaborated with the operations team on an IoT e‑commerce project hosted on AWS.</li>
-                <li>Managed AWS cloud infrastructure, backups, and database optimization.</li>
-                <li>Maintained monitoring using Prometheus, Grafana, Nagios, Instana, and Opsgenie, plus ELK‑based logging.</li>
-                <li>Handled patch management, application deployments on EC2, OpenShift, and EKS, and conducted cost optimization initiatives.</li>
-                <li>Analyzed recurring alerts to drive improvements in monitoring and alerting strategies.</li>
-              </ul>
-            </article>
-
-            <article class="job">
-              <div class="job-header">
-                <div>
-                  <div class="job-title">Senior Systems Engineer</div>
-                  <div class="job-meta">Aug 2018 – Jan 2019 · HostDime India Pvt Ltd</div>
+                  <div class="job-meta">08/2018 – 01/2019 · HostDime India</div>
                 </div>
                 <div class="job-location">Trivandrum, India</div>
               </div>
               <ul>
-                <li>Designed customized hosting solutions based on client requirements.</li>
-                <li>Researched and evaluated new tools and platforms for revenue‑generating hosting solutions.</li>
+                <li>Designed customised hosting solutions to match customer requirements and SLAs.</li>
+                <li>Researched and evaluated new tools and applications with revenue potential for platform customisation.</li>
               </ul>
             </article>
 
@@ -365,29 +378,13 @@
               <div class="job-header">
                 <div>
                   <div class="job-title">Systems Engineer</div>
-                  <div class="job-meta">Oct 2013 – Aug 2018 · AssistanZ Networks Pvt Ltd</div>
+                  <div class="job-meta">10/2013 – 08/2018 · AssistanZ Networks</div>
                 </div>
                 <div class="job-location">Coimbatore, India</div>
               </div>
               <ul>
-                <li>Implemented CI/CD pipelines using Jenkins for application delivery.</li>
-                <li>Provisioned and managed Apache CloudStack infrastructure.</li>
-                <li>Managed Kubernetes infrastructure on GCP and maintained web servers (Apache, Nginx, Tomcat).</li>
-                <li>Administered monitoring with Nagios and Zabbix, and configured MySQL replication and backups.</li>
-              </ul>
-            </article>
-
-            <article class="job">
-              <div class="job-header">
-                <div>
-                  <div class="job-title">Junior Network Administrator</div>
-                  <div class="job-meta">Reubro International</div>
-                </div>
-                <div class="job-location">Ernakulam, India</div>
-              </div>
-              <ul>
-                <li>Provided support for remote and physical servers across Linux environments.</li>
-                <li>Installed and configured Linux (CentOS, Ubuntu) and managed web servers and user accounts.</li>
+                <li>Foundational engineering: managed Apache CloudStack, MySQL replication, and early-stage Kubernetes deployments on GCP.</li>
+                <li>Implemented CI/CD pipelines using Jenkins to automate application deployment.</li>
               </ul>
             </article>
           </div>
@@ -401,10 +398,14 @@
         <h2>Tech Stack</h2>
         <div class="section-card">
           <div class="stack-category">
-            <div class="stack-category-title">Cloud</div>
+            <div class="stack-category-title">Cloud &amp; Platform</div>
             <div class="badges">
               <span class="badge">AWS</span>
               <span class="badge">GCP</span>
+              <span class="badge">EKS</span>
+              <span class="badge">GKE</span>
+              <span class="badge">Cloudflare</span>
+              <span class="badge">multi-region</span>
             </div>
           </div>
 
@@ -413,48 +414,42 @@
             <div class="badges">
               <span class="badge">Terraform</span>
               <span class="badge">Ansible</span>
+              <span class="badge">Python</span>
+              <span class="badge">Bash</span>
+            </div>
+          </div>
+
+          <div class="stack-category">
+            <div class="stack-category-title">CI/CD &amp; GitOps</div>
+            <div class="badges">
               <span class="badge">GitHub Actions</span>
-              <span class="badge">Jenkins</span>
+              <span class="badge">GitLab CI</span>
               <span class="badge">ArgoCD</span>
               <span class="badge">Helm</span>
             </div>
           </div>
 
           <div class="stack-category">
-            <div class="stack-category-title">Containers &amp; Orchestration</div>
-            <div class="badges">
-              <span class="badge">Docker</span>
-              <span class="badge">Kubernetes</span>
-              <span class="badge">AWS EKS</span>
-              <span class="badge">GCP GKE</span>
-              <span class="badge">OpenShift</span>
-            </div>
-          </div>
-
-          <div class="stack-category">
-            <div class="stack-category-title">Observability &amp; Logging</div>
+            <div class="stack-category-title">Observability</div>
             <div class="badges">
               <span class="badge">Datadog</span>
+              <span class="badge">New Relic</span>
               <span class="badge">Prometheus</span>
               <span class="badge">Grafana</span>
-              <span class="badge">Nagios</span>
-              <span class="badge">Zabbix</span>
-              <span class="badge">Instana</span>
-              <span class="badge">AWS OpenSearch</span>
-              <span class="badge">Fluent Bit</span>
-              <span class="badge">Kibana</span>
-              <span class="badge">ELK / Graylog</span>
+              <span class="badge">ELK</span>
+              <span class="badge">OpenSearch</span>
             </div>
           </div>
 
           <div class="stack-category">
-            <div class="stack-category-title">Scripting &amp; Tools</div>
+            <div class="stack-category-title">Reliability &amp; Security</div>
             <div class="badges">
-              <span class="badge">Bash</span>
-              <span class="badge">Python</span>
-              <span class="badge">RabbitMQ</span>
-              <span class="badge">MySQL</span>
-              <span class="badge">PostgreSQL</span>
+              <span class="badge">SLOs</span>
+              <span class="badge">mTLS</span>
+              <span class="badge">PCI-DSS</span>
+              <span class="badge">GDPR</span>
+              <span class="badge">RBAC hardening</span>
+              <span class="badge">KEDA autoscaling</span>
             </div>
           </div>
         </div>
@@ -482,7 +477,7 @@
         <h2>Languages</h2>
         <div class="section-card lang-list">
           <div>English – C1</div>
-          <div>Deutsch – B1/B2</div>
+          <div>Deutsch – B1</div>
         </div>
       </section>
     </aside>
